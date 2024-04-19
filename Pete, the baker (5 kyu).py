@@ -13,9 +13,12 @@ def cakes(recipe, available):
     available_count = dict()
     for ingridient in available:
         if ingridient in recipe:
-            available_count[ingridient] = available[ingridient]//recipe[ingridient]
+            available_count[ingridient] = available[ingridient] // recipe[ingridient]
     count = available_count.values()
     return min(count)
 
 
-print(cakes({"apples": 3, "flour": 300, "sugar": 150, "milk": 100, "oil": 100}, {"sugar": 500, "flour": 2000, "milk": 2000}))
+c = 0
+
+print(cakes({"apples": 3, "flour": 300, "sugar": 150, "milk": 100, "oil": 100},
+            {"sugar": 500, "flour": 2000, "milk": 2000}))
